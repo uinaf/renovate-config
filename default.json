@@ -37,19 +37,6 @@
       "semanticCommitType": "ci"
     },
     {
-      "description": "Everything else uses the deps commit prefix",
-      "matchManagers": [
-        "npm",
-        "gomod",
-        "docker-compose",
-        "dockerfile",
-        "mise",
-        "terraform",
-        "custom.regex"
-      ],
-      "semanticCommitType": "deps"
-    },
-    {
       "description": "OpenTofu registry for providers and modules",
       "matchDatasources": [
         "terraform-provider",
