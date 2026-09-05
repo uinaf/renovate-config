@@ -20,6 +20,16 @@
   ],
   "packageRules": [
     {
+      "description": "First-party reusable workflows track main by design; bumps land once in uinaf/.github",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "uinaf/.github"
+      ],
+      "enabled": false
+    },
+    {
       "description": "Group patch and minor updates per manager; majors stay separate",
       "matchUpdateTypes": [
         "patch",
