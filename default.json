@@ -3,7 +3,7 @@
   "description": "uinaf shared Renovate policy. Mirrors the retired Dependabot config: monthly, seven-day release age, patch and minor grouped, digest pinning.",
   "extends": [
     "config:recommended",
-    ":pinDigests",
+    "docker:pinDigests",
     ":semanticCommits",
     "helpers:pinGitHubActionDigests"
   ],
