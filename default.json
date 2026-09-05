@@ -30,6 +30,18 @@
       "groupName": "{{manager}} patch and minor"
     },
     {
+      "description": "Renovate merges grouped patch, minor, digest, and pin updates itself after every visible check passes; repositories without checks and all majors stay manual",
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "digest",
+        "pin",
+        "pinDigest"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
       "description": "GitHub Actions use the ci commit prefix",
       "matchManagers": [
         "github-actions"
@@ -95,5 +107,8 @@
     }
   ],
   "semanticCommitType": "deps",
-  "semanticCommitScope": null
+  "semanticCommitScope": null,
+  "automerge": false,
+  "platformAutomerge": false,
+  "automergeStrategy": "squash"
 }
