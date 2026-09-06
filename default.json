@@ -34,10 +34,16 @@
       "matchUpdateTypes": [
         "patch",
         "minor",
-        "digest",
         "pin"
       ],
       "groupName": "{{manager}} patch and minor"
+    },
+    {
+      "description": "Digest moves stay manual and get their own group so they never hold an automergeable patch or minor PR",
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "groupName": "{{manager}} digests"
     },
     {
       "description": "Renovate merges grouped patch, minor, and pin updates itself after every visible check passes; repositories without checks and all majors stay manual. Digest-only updates carry no release timestamps, so the seven-day age gate cannot apply; they stay manual",
