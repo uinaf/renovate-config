@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "uinaf shared Renovate policy. Mirrors the retired Dependabot config: monthly, seven-day release age, patch and minor grouped, digest pinning.",
+  "description": "uinaf shared Renovate policy: daily, seven-day release age, patch and minor grouped, digest pinning.",
   "extends": [
     "config:recommended",
     "docker:pinDigests",
@@ -9,7 +9,7 @@
   ],
   "timezone": "Europe/Istanbul",
   "schedule": [
-    "on the first day of the month"
+    "* 0-5 * * *"
   ],
   "minimumReleaseAge": "7 days",
   "internalChecksFilter": "strict",
