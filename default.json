@@ -98,22 +98,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "description": "mise pipx backends that the mise manager does not cover",
+      "description": "Annotated YAML version variables: # renovate: datasource=X depName=Y [versioning=Z] [extractVersion=RE]",
       "managerFilePatterns": [
-        "/(^|/)mise\\.toml$/",
-        "/(^|/)\\.mise\\.toml$/"
-      ],
-      "matchStrings": [
-        "\"pipx:(?<depName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
-      ],
-      "datasourceTemplate": "pypi"
-    },
-    {
-      "customType": "regex",
-      "description": "Annotated version variables: # renovate: datasource=X depName=Y [versioning=Z] [extractVersion=RE]",
-      "managerFilePatterns": [
-        "/\\.ya?ml$/",
-        "/(^|/)mise\\.toml$/"
+        "/\\.ya?ml$/"
       ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[^\\s]+?)(?: versioning=(?<versioning>[a-z-]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+[\\w-]+:\\s*\"?(?<currentValue>[^\"\\s]+)\"?"
