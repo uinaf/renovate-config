@@ -11,8 +11,8 @@ Policy: daily window (00:00–05:59 Europe/Istanbul), seven-day minimum release 
 minor grouped per manager, majors separate, digest pinning for Actions and
 images, `ci` prefix for Actions and `deps` for everything else, OpenTofu
 registry for providers. Non-major version and pin updates automerge by squash
-after passing checks; repositories with no checks, all
-majors, and digest-only updates stay manual — digest updates have no release
+after passing checks. Updates in repositories with no checks, major updates,
+and digest-only updates stay manual — digest updates have no release
 timestamps, so the age gate cannot vouch for them. YAML version variables
 opt in with a `# renovate: datasource=… depName=…` comment above
 the key.
