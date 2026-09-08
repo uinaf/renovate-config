@@ -25,8 +25,9 @@ release age.
 ## Merge mechanism
 
 The shared preset sets `platformAutomerge: false`: Renovate waits for visible
-checks to pass and merges on a later run. Repositories with enforced checks can
-opt into immediate GitHub-native merging with `platformAutomerge: true`.
+checks to pass and merges on a later run. Repositories with enforced checks and
+GitHub's **Allow auto-merge** setting enabled can opt into immediate GitHub-native
+merging with `platformAutomerge: true`.
 GitHub then waits for the repository's **required** checks; an optional check
 does not block merging. Eligibility, release age, and manual update types stay
 the same in both modes.
