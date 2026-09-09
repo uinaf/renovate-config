@@ -7,7 +7,8 @@ Shared Renovate preset for uinaf repositories. Extend it from a repository's
 { "$schema": "https://docs.renovatebot.com/renovate-schema.json", "extends": ["github>uinaf/renovate-config"] }
 ```
 
-Policy: daily window (00:00–05:59 Europe/Istanbul), seven-day minimum release age, patch and
+Policy: daily window (00:00–05:59 Europe/Istanbul), seven-day minimum release age —
+one day for container images and Actions, which are digest-pinned — patch and
 minor grouped per manager, majors separate, digest pinning for Actions and
 images, `ci` prefix for Actions and `deps` for everything else, OpenTofu
 registry for providers. Non-major version and pin updates automerge by squash

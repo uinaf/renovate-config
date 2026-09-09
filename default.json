@@ -84,6 +84,20 @@
       "enabled": false
     },
     {
+      "description": "Container images track upstream on a one-day gate: they are digest-pinned and every bump passes repository checks before it merges, so the seven-day window mostly holds back fixes on daily-shipping images",
+      "matchDatasources": [
+        "docker"
+      ],
+      "minimumReleaseAge": "1 day"
+    },
+    {
+      "description": "Actions are pinned to a commit digest, so the release age adds no assurance the digest does not already give",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "minimumReleaseAge": "1 day"
+    },
+    {
       "description": "Pin Actions and images by digest on the initial run without waiting for release age",
       "matchUpdateTypes": [
         "pin",
