@@ -13,8 +13,8 @@ if (files.length === 0) {
 
 let failed = false;
 for (const file of files) {
-  const config = JSON.parse(await readFile(file, 'utf8'));
   try {
+    const config = JSON.parse(await readFile(file, 'utf8'));
     await resolveConfigPresets(config);
     console.log(`ok   ${file}`);
   } catch (error) {
