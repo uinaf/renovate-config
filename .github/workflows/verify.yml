@@ -24,8 +24,10 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: "24"
-      # The validator checks schema and syntax only. It does not resolve preset
-      # names, so an invalid preset reference still has to be caught by the
-      # hosted Renovate run, as `:pinDigests` was.
-      - name: Validate the shared preset
-        run: npx --yes --package renovate renovate-config-validator --strict default.json renovate.json
+      - run: npm ci
+      # Two checks, because they catch different things. The validator checks
+      # schema and syntax; it accepts any string in `extends`, so a preset name
+      # that does not exist still passes. Resolving the presets is what catches
+      # that, and it is how `:pinDigests` reached every consumer.
+      - name: Validate and resolve the shared preset
+        run: npm run verify

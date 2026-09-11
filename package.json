@@ -1,0 +1,11 @@
+{
+  "name": "uinaf-renovate-config",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "renovate-config-validator --strict default.json renovate.json && node scripts/resolve-presets.mjs default.json"
+  },
+  "devDependencies": {
+    "renovate": "44.82.0"
+  }
+}
