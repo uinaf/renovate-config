@@ -1,3 +1,5 @@
+![renovate-config — shared Renovate preset for uinaf repositories.](https://uinaf.dev/og/banner/renovate-config.png)
+
 # renovate-config
 
 Shared Renovate preset for uinaf repositories. Extend it from a repository's
