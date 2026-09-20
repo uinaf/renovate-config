@@ -39,6 +39,19 @@
       "groupName": "{{manager}} patch and minor"
     },
     {
+      "description": "Runtime versions move as one PR across managers: the .python-version or node-version pin, the requires-python range, and the image tag fail checks when any one of them moves alone",
+      "matchDepNames": [
+        "python",
+        "node"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
+      "groupName": "{{depName}} runtime"
+    },
+    {
       "description": "Digest moves stay manual and get their own group so they never hold an automergeable patch or minor PR",
       "matchUpdateTypes": [
         "digest"
