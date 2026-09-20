@@ -11,7 +11,9 @@ Shared Renovate preset for uinaf repositories. Extend it from a repository's
 
 Policy: daily window (00:00–05:59 Europe/Istanbul), seven-day minimum release age —
 one day for container images and Actions, which are digest-pinned — patch and
-minor grouped per manager, majors separate, digest pinning for Actions and
+minor grouped per manager, majors separate — except the `python` and `node`
+runtimes, whose version pin, `requires-python` range, and image tag always
+move in one PR — digest pinning for Actions and
 images, `ci` prefix for Actions and `deps` for everything else, OpenTofu
 registry for providers. Non-major version and pin updates automerge by squash
 after passing checks. Updates in repositories with no checks, major updates,
