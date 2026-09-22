@@ -20,16 +20,6 @@
   ],
   "packageRules": [
     {
-      "description": "First-party reusable workflows track main by design; bumps land once in uinaf/.github",
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchPackageNames": [
-        "uinaf/.github"
-      ],
-      "enabled": false
-    },
-    {
       "description": "Group patch and minor updates per manager; majors stay separate",
       "matchUpdateTypes": [
         "patch",
@@ -120,6 +110,16 @@
       "schedule": [
         "at any time"
       ]
+    },
+    {
+      "description": "First-party shared workflows and actions pin like any action; a release age adds nothing for a repository we own",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "uinaf/.github"
+      ],
+      "minimumReleaseAge": null
     }
   ],
   "customManagers": [
