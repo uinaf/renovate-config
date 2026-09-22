@@ -30,13 +30,13 @@ release age.
 
 ## Merge mechanism
 
-The shared preset sets `platformAutomerge: false`: Renovate waits for visible
-checks to pass and merges on a later run. Repositories with enforced checks and
-GitHub's **Allow auto-merge** setting enabled can opt into immediate GitHub-native
-merging with `platformAutomerge: true`.
-GitHub then waits for the repository's **required** checks; an optional check
-does not block merging. Eligibility, release age, and manual update types stay
-the same in both modes.
+The shared preset sets `platformAutomerge: true`: Renovate enables GitHub's
+auto-merge on the pull request and GitHub merges once the repository's
+**required** checks pass; an optional check does not block merging. Every
+altaywtf and uinaf repository has **Allow auto-merge** on and required checks in
+its ruleset. A repository without either can set `platformAutomerge: false` so
+Renovate waits for visible checks and merges on a later run. Eligibility,
+release age, and manual update types stay the same in both modes.
 
 The repository's `default-branch-checks` ruleset governs every default-branch
 update, including direct pushes. Approved direct writers need explicit

@@ -138,6 +138,6 @@
   "semanticCommitType": "deps",
   "semanticCommitScope": null,
   "automerge": false,
-  "platformAutomerge": false,
+  "platformAutomerge": true,
   "automergeStrategy": "squash"
 }
