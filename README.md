@@ -50,3 +50,4 @@ on open PRs; disable those pending requests before removing required checks.
 
 Validate configuration changes with
 `npx --yes --package renovate -- renovate-config-validator default.json`.
+The validator accepts any string in `extends`, so `npm run verify` also resolves the presets to catch a preset name that does not exist.

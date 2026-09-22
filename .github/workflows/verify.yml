@@ -25,9 +25,5 @@ jobs:
         with:
           node-version: "24"
       - run: npm ci
-      # Two checks, because they catch different things. The validator checks
-      # schema and syntax; it accepts any string in `extends`, so a preset name
-      # that does not exist still passes. Resolving the presets is what catches
-      # that, and it is how `:pinDigests` reached every consumer.
       - name: Validate and resolve the shared preset
         run: npm run verify
