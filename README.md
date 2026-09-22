@@ -10,7 +10,8 @@ Shared Renovate preset for uinaf repositories. Extend it from a repository's
 ```
 
 Policy: daily window (00:00–05:59 Europe/Istanbul), seven-day minimum release age —
-one day for container images and Actions, which are digest-pinned — patch and
+one day for container images and Actions, which are digest-pinned, none for
+our own `uinaf/.github` workflows and actions — patch and
 minor grouped per manager, majors separate — except the `python` and `node`
 runtimes, whose version pin, `requires-python` range, and image tag always
 move in one PR — digest pinning for Actions and
