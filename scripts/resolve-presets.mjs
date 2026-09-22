@@ -1,7 +1,3 @@
-// The bundled config validator checks schema and syntax only: it accepts any
-// string in `extends`. A preset name that does not exist still validates, then
-// fails for every consumer on the next hosted run. That is how `:pinDigests`
-// shipped. Resolving the presets is the only check that catches it here.
 import { readFile } from 'node:fs/promises';
 import { resolveConfigPresets } from 'renovate/dist/config/presets/index.js';
 
