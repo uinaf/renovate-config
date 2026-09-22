@@ -26,7 +26,7 @@ the key.
 The hosted Renovate app runs the jobs; the schedule permits new update branches
 during that window, rather than guaranteeing an exact start time. Existing PR
 checks and automerge can finish outside it. Initial pins bypass the window and
-release age.
+release age, as do `uinaf/.github` bumps.
 
 ## Merge mechanism
 

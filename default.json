@@ -119,7 +119,10 @@
       "matchPackageNames": [
         "uinaf/.github"
       ],
-      "minimumReleaseAge": null
+      "minimumReleaseAge": null,
+      "schedule": [
+        "at any time"
+      ]
     }
   ],
   "customManagers": [
