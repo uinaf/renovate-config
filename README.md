@@ -33,8 +33,8 @@ release age, as do `uinaf/.github` bumps.
 The shared preset sets `platformAutomerge: true`: Renovate enables GitHub's
 auto-merge on the pull request and GitHub merges once the repository's
 **required** checks pass; an optional check does not block merging. Every
-altaywtf and uinaf repository has **Allow auto-merge** on and required checks in
-its ruleset. A repository without either can set `platformAutomerge: false` so
+source repository under altaywtf and uinaf has **Allow auto-merge** on and
+required checks in its ruleset. A repository without either can set `platformAutomerge: false` so
 Renovate waits for visible checks and merges on a later run. Eligibility,
 release age, and manual update types stay the same in both modes.
 
@@ -44,9 +44,8 @@ repository-scoped exceptions; Renovate gets no checks exemption. Keep signing,
 deletion, and force-push protections separate. See the
 [organization policy](https://github.com/uinaf/.github#default-branch-checks).
 
-Keep the shared default off so repositories without enforced gates cannot opt
-in accidentally. Reverting an opt-in does not cancel auto-merge already enabled
-on open PRs; disable those pending requests before removing required checks.
+Setting `platformAutomerge: false` does not cancel auto-merge already enabled
+on open PRs; disable those before removing required checks.
 
 Validate configuration changes with
 `npx --yes --package renovate -- renovate-config-validator default.json`.
