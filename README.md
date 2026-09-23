@@ -38,9 +38,10 @@ required checks in its ruleset. A repository without either can set `platformAut
 Renovate waits for visible checks and merges on a later run. Eligibility,
 release age, and manual update types stay the same in both modes.
 
-The repository's `default-branch-checks` ruleset governs every default-branch
-update, including direct pushes. Approved direct writers need explicit
-repository-scoped exceptions; Renovate gets no checks exemption. Keep signing,
+A default-branch checks ruleset owned by `uinaf/infra` governs every
+default-branch update, including direct pushes. Approved direct writers need a
+recorded bypass in the ruleset covering their repository; Renovate gets no
+checks exemption. Keep signing,
 deletion, and force-push protections separate. See the
 [organization policy](https://github.com/uinaf/.github#default-branch-checks).
 
