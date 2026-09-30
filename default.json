@@ -29,19 +29,6 @@
       "groupName": "{{manager}} patch and minor"
     },
     {
-      "description": "Runtime versions move as one PR across managers: the .python-version or node-version pin, the requires-python range, and the image tag fail checks when any one of them moves alone",
-      "matchDepNames": [
-        "python",
-        "node"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor",
-        "major"
-      ],
-      "groupName": "{{depName}} runtime"
-    },
-    {
       "description": "Digest moves stay manual and get their own group so they never hold an automergeable patch or minor PR",
       "matchUpdateTypes": [
         "digest"
@@ -99,6 +86,20 @@
         "github-actions"
       ],
       "minimumReleaseAge": "1 day"
+    },
+    {
+      "description": "Runtime versions move as one PR across managers: the .python-version or node-version pin, the requires-python range, and the image tag fail checks when any one of them moves alone. One seven-day gate for every member, after the one-day image and Actions rules, so the group never opens with only the members that aged first",
+      "matchDepNames": [
+        "python",
+        "node"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
+      "groupName": "{{depName}} runtime",
+      "minimumReleaseAge": "7 days"
     },
     {
       "description": "Pin Actions and images by digest on the initial run without waiting for release age",

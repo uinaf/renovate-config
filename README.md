@@ -14,7 +14,7 @@ one day for container images and Actions, which are digest-pinned, none for
 our own `uinaf/.github` workflows and actions — patch and
 minor grouped per manager, majors separate — except the `python` and `node`
 runtimes, whose version pin, `requires-python` range, and image tag always
-move in one PR — digest pinning for Actions and
+move in one PR on the seven-day gate — digest pinning for Actions and
 images, `ci` prefix for Actions and `deps` for everything else, OpenTofu
 registry for providers. Non-major version and pin updates automerge by squash
 after passing checks. Updates in repositories with no checks, major updates,
